@@ -12,5 +12,6 @@ libraryDependencies ++= Seq(
   cache,
   javaWs,
   javaJpa,
-  "org.hibernate" % "hibernate-entitymanager" % "3.6.9.Final"
+  "org.hibernate" % "hibernate-entitymanager" % "3.6.9.Final",
+  "com.wordnik" %% "swagger-play2" % "1.3.12"
 )

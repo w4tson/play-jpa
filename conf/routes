@@ -3,10 +3,18 @@
 # ~~~~
 
 # Home page
-GET     /                           	controllers.Users.index()
-GET     /create                      	controllers.Users.create()
-GET     /users                      	controllers.Users.getAll()
-GET     /users/:id                      controllers.Users.get(id: Integer)
+GET         /                           controllers.Application.index()
+
+POST        /users                      controllers.Users.create()
+GET         /users                      controllers.Users.getAll()
+GET         /users/:id                  controllers.Users.get(id: Integer)
 
 # Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file               controllers.Assets.at(path="/public", file)
+GET         /assets/*file               controllers.Assets.at(path="/public", file)
+
+#swagger docs
+GET         /docs                       controllers.Application.swagger
+GET         /api-docs.json              controllers.ApiHelpController.getResources
+GET         /api-docs.json/users        controllers.ApiHelpController.getResource(path = "/users")
+
+
